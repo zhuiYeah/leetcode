@@ -17,18 +17,21 @@ public class 多余的边 {
         return null;
     }
 
+    //初始化
     public void initialize() {
         for (int i = 0; i < father.length; i++) {
             father[i] = i;
         }
     }
 
+    //寻找父亲 节点
     public int find(int x) {
         if (x == father[x]) return x;
         father[x] = find(father[x]);
         return father[x];
     }
 
+    //y所在的集群加入x所在的集群
     public void join(int x, int y) {
         x = find(x);
         y = find(y);
@@ -37,6 +40,7 @@ public class 多余的边 {
         }
     }
 
+    //x和y是否属于同一集群
     public boolean same(int x, int y) {
         x = find(x);
         y = find(y);

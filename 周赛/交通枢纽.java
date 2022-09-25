@@ -2,6 +2,8 @@ package 周赛;
 
 import java.util.*;
 
+
+//还可以在优化一下，即确定city.size() 为1之后 ， 遍历每一个出发城市，确定所有出发城市都能到达目的城市
 public class 交通枢纽 {
     public int transportationHub(int[][] path) {
         int n = path.length;

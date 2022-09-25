@@ -1,5 +1,6 @@
 package 周赛;
 
+//没什么好说的 简单题
 public class 气温变化趋势 {
     public int temperatureTrend(int[] temperatureA, int[] temperatureB) {
         int start = 0;

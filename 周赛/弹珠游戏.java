@@ -2,6 +2,7 @@ package 周赛;
 
 import java.util.ArrayList;
 
+//周赛错误提交了9次才写出来的
 public class 弹珠游戏 {
     ArrayList<int[]> res = new ArrayList<int[]>();
     int m;
