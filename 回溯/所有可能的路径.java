@@ -30,8 +30,4 @@ public class 所有可能的路径 {
         }
     }
 
-//    public static void main(String[] args) {
-//        int[][] graph = new int[][]{{1,2},{3},{3},{}};
-//        allPathsSourceTarget(graph);
-//    }
 }

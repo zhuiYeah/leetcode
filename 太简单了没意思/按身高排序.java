@@ -1,4 +1,4 @@
-package 周赛;
+package 太简单了没意思;
 
 import java.util.PriorityQueue;
 
