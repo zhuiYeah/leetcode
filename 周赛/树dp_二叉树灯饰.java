@@ -3,7 +3,7 @@ package 周赛;
 //哎 没写出来 差一点点
 //思路完全是对的，只是没有成功确认dp数组的含义以及状态转移方程
 //二叉树上的动态规划
-public class _二叉树灯饰 {
+public class 树dp_二叉树灯饰 {
     public int closeLampInTree(TreeNode root) {
         return f(root)[0];
     }
