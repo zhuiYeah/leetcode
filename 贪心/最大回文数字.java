@@ -1,6 +1,7 @@
 package 贪心;
 
 //贪心还挺有意思的
+//使用num中的数字组成一个最大回文整数
 public class 最大回文数字 {
     public String largestPalindromic(String num) {
         int[] count = new int[10];//记录数字0～9出现的次数
