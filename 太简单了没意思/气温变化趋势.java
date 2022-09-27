@@ -1,4 +1,4 @@
-package 周赛;
+package 太简单了没意思;
 
 //没什么好说的 简单题
 public class 气温变化趋势 {

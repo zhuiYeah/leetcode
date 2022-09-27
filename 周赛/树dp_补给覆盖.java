@@ -1,7 +1,7 @@
 package 周赛;
 
 //树形dp
-public class _补给覆盖 {
+public class 树dp_补给覆盖 {
     public int minSupplyStationNumber(TreeNode root) {
         int[] dp = dfs(root);
         return Math.min(dp[0], dp[1]);

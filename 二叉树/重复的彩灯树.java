@@ -1,7 +1,9 @@
-package 周赛;
+package 二叉树;
+
 
 import java.util.*;
 
+//所有相同的子树
 public class 重复的彩灯树 {
     List<TreeNode> res = new ArrayList<>();
     //存放出现的所有树的string

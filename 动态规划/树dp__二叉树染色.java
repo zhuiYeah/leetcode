@@ -5,7 +5,7 @@ import java.util.Arrays;
 //打家劫舍终极版 ， 在树上进行自底向上的动态规划
 //兄弟题目：好叶子节点对的数量，都构造了一个数组向上返回
 
-public class __二叉树染色 {
+public class 树dp__二叉树染色 {
     int K;
 
     public int maxValue(TreeNode root, int k) {
