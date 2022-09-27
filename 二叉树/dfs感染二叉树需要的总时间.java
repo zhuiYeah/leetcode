@@ -2,6 +2,9 @@ package 二叉树;
 
 import java.util.HashMap;
 
+
+//周赛，亚马逊
+
 //完全错了，思路错了
 public class dfs感染二叉树需要的总时间 {
     public int amountOfTime(TreeNode root, int start) {

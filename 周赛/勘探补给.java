@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 //考察哈希表和有序集合
+//2022 9.16中国银联
 public class 勘探补给 {
     public int[] explorationSupply(int[] station, int[] pos) {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();

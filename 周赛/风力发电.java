@@ -1,6 +1,7 @@
 package 周赛;
 
 //读懂题意后模拟即可
+//2022 9.16中国银联
 public class 风力发电 {
     public int storedEnergy(int storeLimit, int[] power, int[][] supply) {
         int n = supply.length;
