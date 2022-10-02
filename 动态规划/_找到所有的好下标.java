@@ -1,9 +1,10 @@
-package 周赛;
+package 动态规划;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //312场周赛
+//
 //65/66 无语
 public class _找到所有的好下标 {
     int[] nums;

@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 //字典树
 // 哈希表会超时
-public class 字符串的前缀分数和 {
+public class _字符串的前缀分数和 {
     public int[] sumPrefixScores(String[] words) {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         for (String word : words) {

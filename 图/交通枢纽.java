@@ -1,8 +1,9 @@
-package 周赛;
+package 图;
 
 import java.util.*;
 
 //秋季编程大赛
+//图中是否存在一个点，使得该点没有任何出口，而作为其他所有点的直接相连点
 //还可以在优化一下，即确定city.size() 为1之后 ， 遍历每一个出发城市，确定所有出发城市都能到达目的城市
 public class 交通枢纽 {
     public int transportationHub(int[][] path) {

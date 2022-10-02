@@ -1,11 +1,14 @@
 package 字符串;
 
+
+import java.util.Arrays;
+
 public class KMP重复的子字符串 {
     public boolean repeatedSubstringPattern(String s) {
         return false;
     }
 
-    public int[] getNext(String s) {
+    public static int[] getNext(String s) {
         int n = s.length();
         int[] next = new int[n];
         next[0] = 0;
@@ -21,6 +24,10 @@ public class KMP重复的子字符串 {
             next[i] = j;
         }
         return next;
+    }
+
+    public static void main(String []args) {
+        System.out.println(Arrays.toString(getNext("aaabaab")));
     }
 
 }

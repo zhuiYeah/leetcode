@@ -1,8 +1,9 @@
-package 周赛;
+package 字符串;
 
 import java.util.HashMap;
 import java.util.Map;
 
+//必须要删除一个字符，使得所有字符出现的次数相同，给定的字符串能满足这个条件吗
 //88场双周赛  差点没写出来
 public class 删除字符使频率相同 {
     int[] fre = new int[26];
