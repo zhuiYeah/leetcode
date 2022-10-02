@@ -23,7 +23,4 @@ public class KMP重复的子字符串 {
         return next;
     }
 
-    public static void main(String[] args) {
-
-    }
 }
