@@ -9,6 +9,7 @@ public class 完全背包_单词拆分 {
         dp[0] = true;
         //我们知道完全背包先遍历物品先遍历背包都可以，但本题先遍历背包
         for (int i = 1; i < dp.length; i++) {
+            //现在背包容量是i
             for (String value : wordDict) {
                 int jSize = value.length();
                 if (i >= jSize) {
