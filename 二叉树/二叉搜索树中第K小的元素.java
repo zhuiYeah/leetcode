@@ -24,5 +24,28 @@ public class 二叉搜索树中第K小的元素 {
         nums.add(root.val);
         help(root.right);
     }
+}
 
+class ewfcwe {
+    int num = 0;
+    int res;
+    int K;
+
+    public int kthSmallest(TreeNode root, int k) {
+        K = k;
+        dfs(root);
+        return res;
+    }
+
+    public void dfs(TreeNode root) {
+        if (root == null) return;
+        dfs(root.left);
+        num++;
+        //目前所在的节点是第num个节点
+        if (num == K) {
+            res = root.val;
+            return;
+        }
+        dfs(root.right);
+    }
 }
