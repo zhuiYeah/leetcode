@@ -1,6 +1,7 @@
-package 周赛;
+package 动态规划;
 
-//树形dp
+
+//树形dp ， 二叉树之间自底向上的消息传递
 public class 树dp_补给覆盖 {
     public int minSupplyStationNumber(TreeNode root) {
         int[] dp = dfs(root);

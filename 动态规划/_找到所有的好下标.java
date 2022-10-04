@@ -1,9 +1,10 @@
-package 周赛;
+package 动态规划;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //312场周赛
+//
 //65/66 无语
 public class _找到所有的好下标 {
     int[] nums;
@@ -36,6 +37,7 @@ public class _找到所有的好下标 {
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //周赛的时候咋也没想到动态规划 没办法呀
 //没能想到动态规划，记录当前位置的 向前的连续递增长度 和 向后的连续递减长度
+//接雨水
 class dededew {
     public List<Integer> goodIndices(int[] nums, int k) {
         int n = nums.length;

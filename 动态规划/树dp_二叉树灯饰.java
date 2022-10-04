@@ -1,7 +1,11 @@
-package 周赛;
+package 动态规划;
 
 
 //秋季编程大赛
+
+//二叉树的灯泡（0表示关闭 ， 1表示打开），对于每个点 ：三种操作，全变化，变化当前点，变化左右子节点以及当前点，
+//那么最少需要多少次操作可以让灯泡全关（0）
+
 
 //哎 没写出来 差一点点
 //思路完全是对的，只是没有成功确认dp数组的含义以及状态转移方程
@@ -45,6 +49,7 @@ class dwdew {
     }
 
     public int[] f(TreeNode root) { // {all 0, all 1, 0 + sub 1, 1 + sub 0}
+        //dp[0] : 让本颗数全0所需要的最小操作数
         if (root == null) return new int[4];
         var left = f(root.left);
         var right = f(root.right);

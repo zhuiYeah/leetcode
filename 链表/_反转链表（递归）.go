@@ -1,6 +1,6 @@
 package 链表
 
-//想了很久
+// 想了很久
 func reverseList(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
@@ -9,6 +9,7 @@ func reverseList(head *ListNode) *ListNode {
 		return head
 	}
 	newHead := reverseList(head.Next)
+	//这一步太精髓了
 	head.Next.Next = head
 	head.Next = nil
 	return newHead
