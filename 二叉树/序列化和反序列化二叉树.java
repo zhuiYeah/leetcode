@@ -1,7 +1,6 @@
 package 二叉树;
 
 public class 序列化和反序列化二叉树 {
-
 }
 
 class Codeccc {
@@ -22,7 +21,7 @@ class Codeccc {
     public TreeNode deserialize(String data) {
         this.data = data.split(" ");
 
-        if (data.length() == 1) return null;
+        //if (data.length() == 1) return null;
         index = 0;
         var fakeRoot = new TreeNode(114514);
         dfs(fakeRoot, true);
