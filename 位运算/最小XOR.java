@@ -1,9 +1,7 @@
 package 位运算;
 
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 //313场周赛  得到一个数字res，这个数与num2的置位数相同 ， 并且 num1 ^ res的结果最小
@@ -14,6 +12,7 @@ public class 最小XOR {
         //共有x个1供结果使用
         int x = NumberOf1(num2);
 
+        //将整数转化为二进制字符串
         String s = Integer.toString(num1, 2);
         int add = s.length() - 1;
         int res = 0;

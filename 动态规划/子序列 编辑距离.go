@@ -8,7 +8,7 @@ func minDistance11(word1 string, word2 string) int {
 	//先画图，然后推出状态转移方程
 	///dp[i][j]
 	//如果word1[i-1]==word2[j-1] , 那么对于word1和word2新增的字符串，是不需要任何处理滴 ，dp[i][j]=dp[i-1][j-1]
-	///如果word[i-1] != word[j-2] ,
+	///如果word[i-1] != word[j-1] ,
 	//可以在dp[i-1][j]和dp[i][j-1]的基础上删掉一个新增的字符串 dp[i-1][j]+1 or dp[i][j-1]+1
 	//，也可以在dp[i-1][j-1]的基础上更改一个字符串, dp[i-1]][j-1]+1
 	for i := 0; i < len(dp); i++ {
