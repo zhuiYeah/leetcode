@@ -6,10 +6,10 @@ import java.util.Random;
 public class 水塘抽样_链表随机节点 {
 }
 
-class Solution {
+class Solution11 {
     ListNode head;
     Random random;
-    public Solution(ListNode head) {
+    public Solution11(ListNode head) {
         this.head=head;
         this.random=new Random();
     }

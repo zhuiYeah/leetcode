@@ -2,6 +2,7 @@ package 太简单了没意思;
 
 import java.util.Map;
 
+//一开始看成子序列了 ，sb了
 public class 最大升序子数组和 {
     public int maxAscendingSum(int[] nums) {
         int n = nums.length;
