@@ -1,4 +1,4 @@
-package 动态规划
+package 字符串
 
 //返回s的最长回文子串
 
