@@ -25,6 +25,7 @@ public class _括号的分数 {
 }
 
 
+//贡献法
 class edcsadce {
     public static int scoreOfParentheses(String s) {
         int deep = 0;

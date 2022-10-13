@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Objects;
 import java.util.PriorityQueue;
 
+//来自314场周赛
 //提交6次错误的简单题 😂
 public class 处理用时最长的那个任务的员工 {
     public int hardestWorker(int n, int[][] logs) {
