@@ -2,6 +2,7 @@ package 滑动窗口;
 
 //9。22  自己写的暴力 滑动窗口写不出来
 //暴力
+//超越5%
 public class _乘积小于k的子数组 {
 
     public int numSubarrayProductLessThanK(int[] nums, int k) {
@@ -62,6 +63,25 @@ class huadong2 {
                 sum /= nums[left++];
             }
             //现在left right构成一个sum小于k的区间
+            res += right - left + 1;
+        }
+        return res;
+    }
+}
+
+
+class cecede {
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
+        if (k == 0 || k == 1) return 0;
+        int left = 0;
+        int sum = 1;
+        int res = 0;
+        for (int right = 0; right < nums.length; right++) {
+            sum *= nums[right];
+            while (sum >= k) {
+                sum /= nums[left];
+                left++;
+            }
             res += right - left + 1;
         }
         return res;
