@@ -2,6 +2,7 @@ package 二叉树;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 //曾经空了很久没做的题目如今能够秒杀 太励志了
 //最坏情况下需要 O(n* min(2^len+1,n)) len是链表的长度，n是二叉树的节点个数
@@ -36,6 +37,40 @@ public class 二叉树中的列表 {
         if (root.val != list.get(curIndex)) return false;
         if (dfs(root.left, curIndex + 1)) return true;
         if (dfs(root.right, curIndex + 1)) return true;
+        return false;
+    }
+}
+
+
+class dwdweq {
+    List<Integer> list;
+    int n;
+
+    public boolean isSubPath(ListNode head, TreeNode root) {
+        list = new ArrayList<Integer>();
+        while (head != null) {
+            list.add(head.val);
+            head = head.next;
+        }
+        n = list.size();
+        return preOrder(root);
+    }
+
+    public boolean preOrder(TreeNode root) {
+        if (root == null) return false;
+        if (dfs(root, 0)) return true;
+        if (preOrder(root.left)) return true;
+        if (preOrder(root.right)) return true;
+        return false;
+
+    }
+
+    public boolean dfs(TreeNode root, int listIndex) {
+        if (listIndex == n) return true;
+        if (root == null) return false;
+        if (root.val != list.get(listIndex)) return false;
+        if (dfs(root.left, listIndex + 1)) return true;
+        if (dfs(root.right, listIndex + 1)) return true;
         return false;
     }
 }
