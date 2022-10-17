@@ -82,6 +82,7 @@ class cecede {
                 sum /= nums[left];
                 left++;
             }
+            //为什么加上 right - left + 1是核心中的核心
             res += right - left + 1;
         }
         return res;

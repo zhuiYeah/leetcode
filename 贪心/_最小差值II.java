@@ -2,6 +2,8 @@ package 贪心;
 
 import java.util.Arrays;
 
+//对数组中的每个元素，进行 +k或者 -k ，找到这么操作之后数组的MIN（max - min）
+
 public class _最小差值II {
     public int smallestRangeII(int[] nums, int k) {
         int n = nums.length;

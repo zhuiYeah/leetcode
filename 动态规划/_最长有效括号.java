@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 //106/231
 // （（）（）） 测试用例让人醒悟
-//我的思路是 dp[i][j] 最长回文子串
+//我的思路是 dp[i][j] 最长回文子串  区间dp，但这一题不是区间dp
 public class _最长有效括号 {
     public int longestValidParentheses(String s) {
         int n = s.length();
@@ -85,7 +85,42 @@ class dwfdwe {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 0) {
                 max = Math.max(max, i - start + 1);
-            }else{
+            } else {
+                start = i + 1;
+            }
+        }
+        return max;
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class swdw {
+    public int longestValidParentheses(String s) {
+        int n = s.length();
+        int[] pos = new int[n];
+        var stack = new ArrayDeque<Integer>();
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
+                stack.push(i);
+            } else {
+                if (!stack.isEmpty() && s.charAt(stack.peek()) == '(') {
+                    stack.pop();
+                } else {
+                    stack.push(i);
+                }
+            }
+        }
+        while (!stack.isEmpty()) {
+            pos[stack.pop()] = 1;
+        }
+        //接下来找到连续的0的最大长度
+        int max = 0;
+        int start = 0;
+        for (int i = 0; i < pos.length; i++) {
+            if (pos[i] == 0) {
+                max = Math.max(max, i - start + 1);
+            } else {
                 start = i + 1;
             }
         }

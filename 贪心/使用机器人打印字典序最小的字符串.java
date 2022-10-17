@@ -1,4 +1,4 @@
-package _周赛;
+package 贪心;
 
 import java.util.ArrayDeque;
 

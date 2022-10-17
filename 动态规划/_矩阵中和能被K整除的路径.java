@@ -1,7 +1,9 @@
-package _周赛;
+package 动态规划;
 
 //来自第314场周赛
 //一眼dfs超时 ，其他的不会
+
+//动态规划
 public class _矩阵中和能被K整除的路径 {
     public int numberOfPaths(int[][] grid, int k) {
         final int mod = (int) (1e9 + 7);

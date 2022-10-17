@@ -3,6 +3,7 @@ package 排序;
 import java.util.ArrayList;
 import java.util.List;
 
+//暴力 仅超过 5%
 public class 等差子数组 {
     int[] nums;
 
