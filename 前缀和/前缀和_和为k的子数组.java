@@ -1,4 +1,4 @@
-package 动态规划;
+package 前缀和;
 
 import java.util.HashMap;
 import java.util.Map;

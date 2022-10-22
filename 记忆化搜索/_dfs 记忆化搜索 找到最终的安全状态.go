@@ -1,4 +1,4 @@
-package DFS和BFS
+package 记忆化搜索
 
 func eventualSafeNodes(graph [][]int) []int {
 	n := len(graph) //一共有n个节点
