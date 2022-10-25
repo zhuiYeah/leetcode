@@ -22,6 +22,4 @@ public class 统计定界子数组的数目 {
         }
         return res;
     }
-
-
 }
