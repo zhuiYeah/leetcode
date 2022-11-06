@@ -27,9 +27,40 @@ public class 重排链表 {
         cur.next = null;
         var tmp = pre.next;
         pre.next = cur;
-        pre=tmp;
+        pre = tmp;
         if (pre == cur) return true;
         return false;
     }
 
+}
+
+
+//剑指offer
+class ecwdew {
+    private ListNode pre;
+    private ListNode cur;
+
+    public void reorderList(ListNode head) {
+        pre = new ListNode();
+        pre.next = head;
+        cur = head;
+        f(head);
+    }
+
+    private boolean f(ListNode head) {
+        if (head == null) return false;
+        if (f(head.next)) return true;
+        if (cur == head || cur.next == head) {
+            pre.next = cur;
+            head.next = null;
+            return true;
+        }
+        var tmp = cur;
+        cur = cur.next;
+        tmp.next = head;
+        head.next = null;
+        pre.next = tmp;
+        pre = head;
+        return false;
+    }
 }

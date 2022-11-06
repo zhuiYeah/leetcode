@@ -32,7 +32,7 @@ public class 词频分析_字母异位词分组 {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-class d3wedexw{
+class d3wedexw {
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, ArrayList<String>> map = new HashMap<>();
         for (String str : strs) {
@@ -48,5 +48,30 @@ class d3wedexw{
             result.add(entry.getValue());
         }
         return result;
+    }
+}
+
+
+//剑指offer
+class dewd {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> res = new ArrayList<>();
+        HashMap<String, ArrayList<String>> map = new HashMap<>();
+        for (String str : strs) {
+            var s = getFormatStr(str);
+            var list = map.getOrDefault(s, new ArrayList<String>());
+            list.add(str);
+            map.put(s, list);
+        }
+        for (Map.Entry<String, ArrayList<String>> entry : map.entrySet()) {
+            res.add(entry.getValue());
+        }
+        return res;
+    }
+
+    public String getFormatStr(String s) {
+        char[] c = s.toCharArray();
+        Arrays.sort(c);
+        return new String(c);
     }
 }

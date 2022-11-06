@@ -23,3 +23,23 @@ public class 回文链表_递归 {
         return true;
     }
 }
+
+
+//剑指offer
+class dwdw {
+    private ListNode head;
+
+    public boolean isPalindrome(ListNode head) {
+        this.head = head;
+        return dfs(head);
+    }
+
+    private boolean dfs(ListNode cur) {
+        if (cur == null) return true;
+        if (!dfs(cur.next)) return false;
+        //if (cur == head || head.next == cur) return cur.val == head.val;
+        if (cur.val != head.val) return false;
+        head = head.next;
+        return true;
+    }
+}
