@@ -29,3 +29,33 @@ public class 路径总和III {
         preorder(root.right);
     }
 }
+
+
+//剑指offer
+class ede {
+    int res;
+    int targetSum;
+
+    public int pathSum(TreeNode root, int targetSum) {
+        this.targetSum = targetSum;
+        dfs(root);
+        return res;
+    }
+
+    //遍历每个节点，对每个节点调用f函数
+    private void dfs(TreeNode root) {
+        if (root == null) return;
+        f(root, 0);
+        dfs(root.left);
+        dfs(root.right);
+    }
+
+    //f(node)计算从node作为起点的符合条件的向下子路径一共有多少
+    private void f(TreeNode root, long sum) {
+        if (root == null) return;
+        sum += root.val;
+        if (sum == targetSum) res++;
+        f(root.left, sum);
+        f(root.right, sum);
+    }
+}

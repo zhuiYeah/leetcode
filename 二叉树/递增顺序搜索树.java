@@ -19,3 +19,25 @@ public class 递增顺序搜索树 {
         inorder(root.right);
     }
 }
+
+
+//剑指offer
+class fcede {
+
+    private TreeNode fakeRoot = new TreeNode();
+    private TreeNode tmp = fakeRoot;
+
+    public TreeNode increasingBST(TreeNode root) {
+        dfs(root);
+        return fakeRoot.right;
+    }
+
+    public void dfs(TreeNode root) {
+        if (root == null) return;
+        dfs(root.left);
+        tmp.right = new TreeNode(root.val);
+        tmp = tmp.right;
+        dfs(root.right);
+    }
+
+}
