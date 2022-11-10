@@ -13,7 +13,7 @@ import java.util.TreeMap;
 //记忆化搜索
 class hhjbhj {
     int n, m;
-    //f[i][j]表示第i～n-1个工厂处理第j～m-1个机器人的代价总和
+    //f[i][j]表示第i～n-1个工厂处理第j～m-1个机器人的最小代价总和
     long[][] f;
     long inf = (long) 1e13;
     List<Integer> robot;
@@ -34,6 +34,8 @@ class hhjbhj {
     public long f(int i, int j) {
         //到达i工厂的时候，所有机器人已经处理完了，没有机器人了
         if (j == m) return 0;
+        //如果当前状态已经计算过就直接返回
+        if (f[i][j] != inf) return f[i][j];
         //最后一个工厂
         if (i == n - 1) {
             //当前剩余未处理机器人的个数大于最后一个工厂的limit，返回一个无穷大
@@ -44,9 +46,6 @@ class hhjbhj {
             f[i][j] = res;
             return res;
         }
-        //如果当前状态已经计算过就直接返回
-        if (f[i][j] != inf) return f[i][j];
-
         //res初始化为  f[i][j]的可能值之一：当前工厂i不处理任何机器人的情况
         long res = f(i + 1, j);
         //dis记录当前工厂i处理的机器人的总代价

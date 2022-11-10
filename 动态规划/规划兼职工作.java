@@ -86,6 +86,6 @@ public class 规划兼职工作 {
 
     public static void main(String[] args) {
         long x = 1L << (9 + 9 + 9 + 12 - 1);
-        System.out.println(x/1024/1024/1024 +"GB");
+        System.out.println(x / 1024 / 1024 / 1024 + "GB");
     }
 }
