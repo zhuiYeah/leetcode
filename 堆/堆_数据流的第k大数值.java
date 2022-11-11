@@ -2,11 +2,12 @@ package 堆;
 
 import java.util.PriorityQueue;
 
+//剑指offer
 public class 堆_数据流的第k大数值 {
     class KthLargest {
         //堆默认是小顶堆
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
-        int K;
+        private PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+        private int K;
 
         public KthLargest(int k, int[] nums) {
             K = k;

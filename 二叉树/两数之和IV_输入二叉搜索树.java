@@ -28,3 +28,24 @@ public class 两数之和IV_输入二叉搜索树 {
         return false;
     }
 }
+
+//剑指offer
+class fewfew {
+    private int K;
+    private Set<Integer> set;
+
+    public boolean findTarget(TreeNode root, int k) {
+        K = k;
+        set = new HashSet<Integer>();
+        return f(root);
+    }
+
+    private boolean f(TreeNode root) {
+        if (root == null) return false;
+        if (set.contains(K - root.val)) return true;
+        set.add(root.val);
+        if (f(root.left)) return true;
+        if (f(root.right)) return true;
+        return false;
+    }
+}
