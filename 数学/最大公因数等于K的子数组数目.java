@@ -13,12 +13,8 @@ public class 最大公因数等于K的子数组数目 {
             for (int j = i + 1; j < n; j++) {
                 //这两个数的最大公约数是next
                 next = gcd(next, nums[j]);
-                if (next == k) {
-                    count++;
-                } else if (next < k) {
-                    //对于下一个要遍历到的数字来说，如果当前的最大公约数已经小于k了，那么再往后计算最大公约数一定小于k
-                    break;
-                }
+                if (next == k) count++;
+                else if (next < k) break;//对于下一个要遍历到的数字来说，如果当前的最大公约数已经小于k了，那么再往后计算最大公约数一定小于k
             }
         }
         return count;

@@ -8,7 +8,7 @@ import (
 func decodeString(s string) string {
 	stack := []byte{}
 	b := []byte(s)
-	toolABC := []byte{}
+	var toolABC []byte
 	toolInt := []byte{}
 	for i := 0; i < len(b); i++ {
 		if (b[i] >= '0' && b[i] <= '9') || b[i] == '[' || (b[i] >= 'a' && b[i] <= 'z') {

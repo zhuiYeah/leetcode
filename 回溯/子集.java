@@ -25,8 +25,36 @@ public class 子集 {
         }
 
         for (int i = curIndex + 1; i < n; i++) {
-            backtracking(i );
+            backtracking(i);
             path.remove(path.size() - 1);
         }
+    }
+}
+
+//剑指offer
+class dede {
+    List<List<Integer>> res;
+    List<Integer> path;
+    int n;
+    int[] NUMS;
+
+    public List<List<Integer>> subsets(int[] nums) {
+        NUMS = nums;
+        n = nums.length;
+        res = new ArrayList<>();
+        path = new ArrayList<>();
+        backtracking(0);
+        return res;
+    }
+
+    private void backtracking(int index) {
+        if (index == n) {
+            res.add(new ArrayList<>(path));
+            return;
+        }
+        path.add(NUMS[index]);
+        backtracking(index + 1);
+        path.remove(path.size() - 1);
+        backtracking(index + 1);
     }
 }

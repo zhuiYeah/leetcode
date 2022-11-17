@@ -5,8 +5,9 @@ import java.util.HashSet;
 
 //5,2,1,4,100,3 ,最长连续序列的长度为5；
 
+//哈希表维护连续序列的区间
 public class 最长连续序列 {
-    class Solution {
+
         public int longestConsecutive(int[] nums) {
             int max = 0;
             var map = new HashMap<Integer, Integer>();
@@ -45,5 +46,5 @@ public class 最长连续序列 {
             }
             return max;
         }
-    }
+
 }

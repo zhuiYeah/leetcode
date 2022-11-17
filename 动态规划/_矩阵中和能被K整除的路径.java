@@ -31,10 +31,10 @@ public class _矩阵中和能被K整除的路径 {
                     leftAndUp[x] = (dp[i - 1][j][x] + dp[i][j - 1][x]) % mod;
                 }
                 for (int x = 0; x < k; x++) {
-                    if (leftAndUp[x] != 0) {
+                    //if (leftAndUp[x] != 0) {
                         int val = (grid[i][j] + x) % k;
                         dp[i][j][val] = leftAndUp[x] % mod;
-                    }
+                    //}
                 }
             }
         }

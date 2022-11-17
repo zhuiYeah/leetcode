@@ -25,3 +25,20 @@ public class 堆_合并k个升序链表 {
         return fakeHead.next;
     }
 }
+
+//剑指offer
+class cede {
+    public ListNode mergeKLists(ListNode[] lists) {
+        var pq = new PriorityQueue<ListNode>((a, b) -> a.val - b.val);
+        for (ListNode list : lists) if (list != null) pq.add(list);
+        var fakeHead = new ListNode();
+        var tmp = fakeHead;
+        while (!pq.isEmpty()) {
+            var list = pq.poll();
+            tmp.next= new ListNode(list.val);
+            tmp = tmp.next;
+            if (list.next != null) pq.add(list.next);
+        }
+        return fakeHead.next;
+    }
+}

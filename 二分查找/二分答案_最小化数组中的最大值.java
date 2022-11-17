@@ -105,7 +105,7 @@ class uyftssy {
 //0 <= nums[i] <= 10^9,于是最极端的情况是最小化数组的最大值之后 数组的最大值为0或者10^9;
 //于是对答案范围 0 ～ 10^9 进行二分查找
 //问题变为 数字mid能否从前向后的填满这个数组 ， 找到满足条件的mid的最小值
-class Solution {
+class Solution1 {
     int[] nums;
 
     public int minimizeArrayValue(int[] nums) {
