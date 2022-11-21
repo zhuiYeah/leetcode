@@ -1,9 +1,10 @@
-package _周赛;
+package 哈希表;
+
 
 import java.util.*;
 
 public class 二叉搜索树的最近节点查询 {
-    TreeSet<Integer> set = new TreeSet<Integer>();
+    TreeSet<Integer> set = new TreeSet<>();
 
     public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {
         dfs(root);
@@ -12,14 +13,10 @@ public class 二叉搜索树的最近节点查询 {
             Integer down = set.floor(x);
             Integer up = set.ceiling(x);
             var list = new ArrayList<Integer>();
-            if (down != null)
-                list.add(down);
-            else
-                list.add(-1);
-            if (up != null)
-                list.add(up);
-            else
-                list.add(-1);
+            if (down != null) list.add(down);
+            else list.add(-1);
+            if (up != null) list.add(up);
+            else list.add(-1);
             res.add(list);
         }
         return res;
@@ -27,8 +24,7 @@ public class 二叉搜索树的最近节点查询 {
     }
 
     private void dfs(TreeNode root) {
-        if (root == null)
-            return;
+        if (root == null) return;
         dfs(root.left);
         set.add(root.val);
         dfs(root.right);

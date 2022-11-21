@@ -1,7 +1,8 @@
-package _周赛;
+package 图;
 
 import java.util.*;
 
+//图 + dfs + 贪心
 public class 到达首都的最少油耗 {
     long res = 0;
     int SEATS;

@@ -1,4 +1,4 @@
-package _周赛;
+package 数学;
 
 import java.util.Arrays;
 
@@ -9,8 +9,8 @@ public class 子序列寬度之和 {
         final int MOD = (int) (1e9 + 7);
         int[] pow2 = new int[nums.length];
         pow2[0] = 1;
-        for (int i = 1; i < pow2.length; i++)
-            pow2[i] = 2 * pow2[i - 1] % MOD;
+        //2的幂太大了，取模预处理很重要
+        for (int i = 1; i < pow2.length; i++) pow2[i] = 2 * pow2[i - 1] % MOD;
     
         long res = 0;
         //2^max記錄當前元素作爲最大值出現的次數

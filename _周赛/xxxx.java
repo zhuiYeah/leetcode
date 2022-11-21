@@ -13,6 +13,7 @@ public class xxxx {
             for (int j = 0; j < col; j++) {
                 int ni = i / m, nj = j / n;
                 res[ni][nj] += graph[i][j];
+                cnt[ni][nj]++;
             }
         }
 
