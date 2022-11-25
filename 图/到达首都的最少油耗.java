@@ -7,15 +7,15 @@ public class 到达首都的最少油耗 {
     long res = 0;
     int SEATS;
     // 映射 点 和 他的全部能到达点
-    Map<Integer, Set<Integer>> map = new HashMap<Integer, Set<Integer>>();
+    Map<Integer, Set<Integer>> map = new HashMap<>();
 
     public long minimumFuelCost(int[][] roads, int seats) {
         SEATS = seats;
         for (int[] road : roads) {
-            var x = map.getOrDefault(road[0], new HashSet<Integer>());
+            var x = map.getOrDefault(road[0], new HashSet<>());
             x.add(road[1]);
             map.put(road[0], x);
-            x = map.getOrDefault(road[1], new HashSet<Integer>());
+            x = map.getOrDefault(road[1], new HashSet<>());
             x.add(road[0]);
             map.put(road[1], x);
         }

@@ -28,6 +28,28 @@ public class 目标和 {
         backtracking(curIndex + 1, curSum - nums[curIndex]);
 
     }
+}
 
 
+//剑指offer
+class gfr5g {
+    int[] nums;
+    int target;
+    int count = 0;
+
+    public int findTargetSumWays(int[] nums, int target) {
+        this.nums = nums;
+        this.target = target;
+        backtracking(0, 0);
+        return count;
+    }
+
+    private void backtracking(int idx, int sum) {
+        if (idx == nums.length) {
+            if (sum == target) count++;
+            return;
+        }
+        backtracking(idx + 1, sum + nums[idx]);
+        backtracking(idx + 1, sum - nums[idx]);
+    }
 }

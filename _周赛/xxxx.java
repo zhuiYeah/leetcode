@@ -25,3 +25,29 @@ public class xxxx {
         return res;
     }
 }
+
+////import numpy as np
+////
+////
+////
+//        def  pixel_merge(image,m,n):
+//        #totm,totn代表原始图像的总行列数
+//        totm = image.shape[0]
+//        totn = image.shape[1]
+//        #newm、newn代表新图像的总行列数
+//        newm =   int(totm/m)  if totm%m==0  else int(totm/m+1)
+//        newn =  int(totn/n) if totn%n==0  else int(totn/n+1)
+//        newimage = np.zeros((newm,newn))
+//        cnt = np.zeros((newm,newn))
+//
+//        for i in range (0,totm) :
+//        for j in range(0,totn) :
+//        tari = int(i/m)
+//        tarj = int(j/n)
+//        newimage[tari,tarj]+=image[i,j]
+//        cnt[tari,tarj]+=1
+//
+//        for i in range (0,newm):
+//        for j in range (0,newn):
+//        newimage[i,j]/=cnt[i,j]
+//        return newimage

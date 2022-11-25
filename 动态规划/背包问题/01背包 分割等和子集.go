@@ -5,6 +5,8 @@ package 背包问题
 //转换为01背包问题：背包容量为 数组元素和/2 ，要放的物品i，价值为nums[i],重量也为nums[i]
 //能否把背包恰好放满
 
+//01背包，背包容量必须从大到小
+
 func canPartition(nums []int) bool {
 	var bagCapacity int
 	for i := 0; i < len(nums); i++ {

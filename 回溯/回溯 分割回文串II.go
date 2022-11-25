@@ -2,6 +2,7 @@ package 回溯
 
 import "math"
 
+//回溯超时
 func minCut(s string) int {
 	num := math.MaxInt
 	path := 0 //代表目前已经切到手多少块了

@@ -1,7 +1,8 @@
-package 动态规划;
+package 动态规划.背包问题;
 
 import java.util.Arrays;
 
+//剑指offer
 //01背包
 //nums里面的数字通过加减 最后结果等于 target ，一共有几种可能的组合方式
 public class 目标和 {
@@ -29,4 +30,26 @@ public class 目标和 {
 
         return dp[bagCapability];
     }
+}
+
+
+class edede {
+    public int findTargetSumWays(int[] nums, int target) {
+        //a + b = sum
+        //a - b = target
+        int sum = Arrays.stream(nums).sum();
+        if ((sum + target) % 2 == 1) return 0;
+        if (Math.abs(target) > sum) return 0;
+        int cap = (sum + target) / 2;
+        //放满容量为cap的背包有几种方法
+        var dp = new int[cap + 1];
+        dp[0] = 1; //计放满空背包的方法有一种
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = cap; j >= nums[i]; j--) {
+                dp[j] += dp[j - nums[i]];
+            }
+        }
+        return dp[cap];
+    }
+
 }

@@ -1,4 +1,4 @@
-package 动态规划
+package 字符串
 
 func longestCommonSubsequence(text1 string, text2 string) int {
 	dp := make([][]int, len(text1)+1)
