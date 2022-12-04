@@ -2,6 +2,7 @@ package 动态规划.背包问题;
 
 import java.util.Arrays;
 
+//先物品后背包，背包从大到小
 public class 分割等和子集 {
     public boolean canPartition(int[] nums) {
         int cap = Arrays.stream(nums).sum();
