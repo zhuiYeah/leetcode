@@ -6,6 +6,7 @@ import java.util.Arrays;
 //wa 了两次得出了正确解
 // 第一次是将 dp[i] 拓展为 dp[i][0] dp[i][1]
 // 第二次是将 找到之前的第一个能承载i的长方体 这个逻辑 变成 找到之前全部的能承载i的长方体
+
 public class _堆叠长方体的最大高度 {
     public int maxHeight(int[][] cuboids) {
         int n = cuboids.length;
