@@ -1,4 +1,4 @@
-package 并查集;
+package 图.并查集;
 
 public class 多余的边 {
     int[] father;
@@ -31,7 +31,7 @@ public class 多余的边 {
         return father[x];
     }
 
-    //y所在的集群加入x所在的集群
+    //y所在的集群加入x所在的集群，顺序无所谓，其实就是合并两个集群
     public void join(int x, int y) {
         x = find(x);
         y = find(y);

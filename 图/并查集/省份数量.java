@@ -1,4 +1,4 @@
-package 并查集;
+package 图.并查集;
 
 public class 省份数量 {
     // 节点i属于集群father[i]

@@ -1,4 +1,4 @@
-package _周赛;
+package 蒸蒸简单;
 
 public class 数组中字符串的最大值 {
     public int maximumValue(String[] strs) {

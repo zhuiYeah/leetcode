@@ -1,4 +1,4 @@
-package 并查集;
+package 图.并查集;
 
 public class 寻找图中是否存在路径 {
     int[] father;

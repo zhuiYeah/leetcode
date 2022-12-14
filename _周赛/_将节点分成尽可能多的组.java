@@ -50,7 +50,7 @@ public class _将节点分成尽可能多的组 {
         return true;
     }
 
-    //以start作为起点，能将所在集群分成XX个group
+    //以start作为起点，能将所在集群分成XX个group ，bfs
     private int bfs(int start) {
         int max = 0;
         time[start] = ++clock;
