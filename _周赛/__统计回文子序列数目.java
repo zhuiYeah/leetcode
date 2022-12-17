@@ -3,7 +3,7 @@ package _周赛;
 //长度为5的回文子序列的全部数目
 
 //前后缀处理 + 中心枚举
-public class _统计回文子序列数目 {
+public class __统计回文子序列数目 {
     final int MOD = (int) 1e9 + 7;
 
 //    public int countPalindromess(String s) {
@@ -48,5 +48,39 @@ public class _统计回文子序列数目 {
             pre[a]++;
         }
         return (int) ans;
+    }
+}
+
+
+//暴力的前后缀处理  + 中心枚举
+//超时 ，前后缀处理需要优化
+
+class dedede {
+    final int MOD = (int) 1e9 + 7;
+
+    public int countPalindromes(String S) {
+        int n = S.length();
+        var pre = new int[n][10][10];
+        var suf = new int[n][10][10];
+        long res = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int a = S.charAt(i) - '0', b = S.charAt(j) - '0';
+                for (int k = j + 1; k < n; k++) {
+                    pre[k][a][b]++;
+                }
+                for (int k = i - 1; k >= 0; k--) {
+                    suf[k][a][b]++;
+                }
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            for (int a = 0;a < 10; a++){
+                for (int b = 0;b < 10; b++){
+                    res =  (res + (long) suf[i][b][a] * pre[i][a][b])%MOD;
+                }
+            }
+        }
+        return (int) res;
     }
 }

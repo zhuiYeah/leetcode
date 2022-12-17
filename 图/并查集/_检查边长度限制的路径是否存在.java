@@ -1,9 +1,11 @@
 package 图.并查集;
 
 
+//g是一个有代价的无向图，图中一共有n个点（0 ～ n-1 ） ，queries[i]会查询 在带有权 queries[i][2] 的情况下 ， 两个点是否能在图中连通
+
 import java.util.Arrays;
 
-//离线询问  + 图.并查集 + 贪心
+//离线询问  + 并查集 + 贪心
 public class _检查边长度限制的路径是否存在 {
     int[] fa;
 

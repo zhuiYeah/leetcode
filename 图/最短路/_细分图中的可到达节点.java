@@ -3,6 +3,8 @@ package 图.最短路;
 
 import java.util.Arrays;
 
+//细分一个图，判断从0点出发权为max的话能到达的最大节点总数
+
 //稠密图+最短路
 public class _细分图中的可到达节点 {
     static int N = 3010, INF = 0x3f3f3f3f;
