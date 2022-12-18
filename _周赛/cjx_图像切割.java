@@ -1,6 +1,6 @@
 package _周赛;
 
-public class 图像切割 {
+public class cjx_图像切割 {
     public double[][] Pixel_Merge(int m, int n, double[][] graph) {
         // ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
         int row = graph.length, col = graph[0].length;
