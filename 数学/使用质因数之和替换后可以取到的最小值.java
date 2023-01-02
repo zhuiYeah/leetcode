@@ -22,7 +22,7 @@ public class 使用质因数之和替换后可以取到的最小值 {
             }
             n = 0;
             for (Integer integer : list) n += integer;
-            if (n>=tmp){
+            if (n >= tmp) {
                 n = tmp;
                 break;
             }
