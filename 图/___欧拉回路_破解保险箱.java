@@ -10,7 +10,7 @@ import java.util.Set;
  *
  * **/
 
-public class 欧拉回路_破解保险箱 {
+public class ___欧拉回路_破解保险箱 {
     Set<Integer> seen = new HashSet<Integer>();
     StringBuffer ans = new StringBuffer();
     int highest;
@@ -20,9 +20,7 @@ public class 欧拉回路_破解保险箱 {
         highest = (int) Math.pow(10, n - 1);
         this.k = k;
         dfs(0);
-        for (int i = 1; i < n; i++) {
-            ans.append('0');
-        }
+        ans.append("0".repeat(Math.max(0, n - 1)));
         return ans.toString();
     }
 
