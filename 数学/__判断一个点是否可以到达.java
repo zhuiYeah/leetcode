@@ -1,4 +1,4 @@
-package _周赛;
+package 数学;
 
 //周赛t4
 //数学
