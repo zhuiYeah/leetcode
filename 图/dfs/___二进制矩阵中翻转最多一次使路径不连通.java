@@ -1,4 +1,4 @@
-package _周赛;
+package 图.dfs;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,6 +10,8 @@ import java.util.Set;
  * 最多翻转一次矩阵中的点  1  -》 0
  * <p>
  * 如果可以使得 (0，0) - > (m-1,n-1) 不存在连通路径 ， 返回true，否则返回 false
+ *
+ * 连通路径只能向下或者向右走
  */
 
 public class ___二进制矩阵中翻转最多一次使路径不连通 {
@@ -80,12 +82,39 @@ class dfrefderw {
 
 
 class testHashSet {
-    public static void main(String[] args)  {
-        var x = new int[] {1,2,3};
-        var y = new int[] {1,2,3};
+    public static void main(String[] args) {
+        var x = new int[]{1, 2, 3};
+        var y = new int[]{1, 2, 3};
         var set = new HashSet<int[]>();
         set.add(x);
         set.add(y);
         System.out.println(set.size());
+    }
+}
+
+
+class dfewferw {
+    private int[][] g;
+    private int m, n;
+
+    public boolean isPossibleToCutPath(int[][] grid) {
+        g = grid;
+        m = g.length;
+        n = g[0].length;
+        //第一次找下轮廓，并且标记访问过 ， 第二次走上轮廓
+        //第一次不能连通 ｜｜ 第一次连通第二次不能连通
+        return !dfs(0, 0, true) || !dfs(0, 0, false);
+
+    }
+
+    //能否从x，y位置走到终点
+    private boolean dfs(int x, int y, boolean first) {
+        if (x < 0 || x >= m || y < 0 || y >= n || g[x][y] == 0) return false;
+        if (x == m - 1 && y == n - 1) return true;
+        if (!(x == 0 && y == 0)) g[x][y] = 0;
+        if (first)  //先下再右，寻找下轮廓
+            return dfs(x + 1, y, true) || dfs(x, y + 1, true);
+        else       //先右再下，寻找上轮廓
+            return dfs(x, y + 1, false) || dfs(x + 1, y, false);
     }
 }
