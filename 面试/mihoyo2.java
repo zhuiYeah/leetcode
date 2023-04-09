@@ -2,6 +2,10 @@ package 面试;
 
 import java.util.Scanner;
 
+/**
+ * 图中有n个节点 n-1个边 ，每个边都有红蓝两色
+ * 找出图中的颜色交替的最长路径
+ * */
 public class mihoyo2 {
     int[][] g;//表示图
     int res = 0;
