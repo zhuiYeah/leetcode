@@ -3,7 +3,7 @@ package 动态规划;
 //将一个数组任意切割，但最大子数组长度为k，切割后子数组中的数字全部变为其中的最大值，给出切割后数组的最大和
 
 
-public class 分隔数组以得到最大和 {
+public class __分隔数组以得到最大和 {
     public static int maxSumAfterPartitioning(int[] arr, int k) {
         int n = arr.length;
         var dp = new int[n];
