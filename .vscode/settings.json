@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "stdbool.h": "c",
+        "string.h": "c",
+        "unistd.h": "c",
+        "uthash.h": "c",
+        "cstdlib": "c",
+        "cstdio": "c",
+        "__bit_reference": "c",
+        "__string": "c",
+        "cstring": "c"
+    },
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}",
+}
