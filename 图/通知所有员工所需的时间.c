@@ -86,8 +86,20 @@ int numOfMinutes(int n, int headID, int *manager, int managerSize, int *informTi
 }
 
 
-int main(){
-    char  *s= "abcde";
-    printf("%lu\n", sizeof (s));
+#define  message_for(a, b)  printf(#a " and " #b ": We love you!\n")
+
+#if !defined (MESSAGE)
+#define MESSAGE "You wish!"
+#endif
+int main()
+{
+    printf("File :%s\n", __FILE__ );
+    printf("Date :%s\n", __DATE__ );
+    printf("Time :%s\n", __TIME__ );
+    printf("Line :%d\n", __LINE__ );
+    printf("ANSI :%d\n", __STDC__ );
+    message_for(Carole, Debra);
+    printf("Here is the message: %s\n", MESSAGE);
+    return 0;
 }
 

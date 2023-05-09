@@ -1,7 +1,9 @@
 #include <stdbool.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-#include <uthash.h>
+#include "/Users/zhui/IdeaProjects/leetcode/uthash/include/uthash.h"
 
 /***
  * hashtable的实现
@@ -125,7 +127,7 @@ bool equalFrequency(char* word) {
     return false;
 }
 
-int mian() {
+int main() {
     bool res = equalFrequency("abcc");
     printf("%u\n", res);
 }
