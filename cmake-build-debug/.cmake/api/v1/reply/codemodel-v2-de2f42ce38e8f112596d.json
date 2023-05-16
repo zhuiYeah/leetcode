@@ -32,8 +32,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/zhui/IdeaProjects/leetcode/cmake-build-debug",
-		"source" : "/Users/zhui/IdeaProjects/leetcode"
+		"build" : "/Users/gaoshuang/Desktop/leetcode/cmake-build-debug",
+		"source" : "/Users/gaoshuang/Desktop/leetcode"
 	},
 	"version" : 
 	{

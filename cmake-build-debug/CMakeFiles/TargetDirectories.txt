@@ -1,2 +1,2 @@
-/Users/zhui/IdeaProjects/leetcode/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/zhui/IdeaProjects/leetcode/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/gaoshuang/Desktop/leetcode/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/gaoshuang/Desktop/leetcode/cmake-build-debug/CMakeFiles/rebuild_cache.dir
