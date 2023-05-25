@@ -3,6 +3,7 @@ package 回溯;
 import java.util.HashSet;
 import java.util.Set;
 
+/**用光所有的字符，能产生多少种不同的排列*/
 public class 活字印刷 {
     int res = -1;
     String tiles;
@@ -18,7 +19,6 @@ public class 活字印刷 {
     }
 
     private void backtrack() {
-
         res++;
         Set<Character> visited = new HashSet<>();//本层已经选过的字符不要重复选择
         for (int i = 0; i < n; i++) {

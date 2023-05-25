@@ -3,7 +3,7 @@ package 模拟;
 import java.util.HashMap;
 import java.util.Map;
 
-public class 数青蛙 {
+public class ___数青蛙 {
     public int minNumberOfFrogs(String croakOfFrogs) {
         int res = 0, frogNum = 0;
         int n = croakOfFrogs.length();
