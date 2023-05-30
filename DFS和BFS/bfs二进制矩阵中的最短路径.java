@@ -32,3 +32,32 @@ public class bfs二进制矩阵中的最短路径 {
         return -1;
     }
 }
+
+
+class Day2023_5_26 {
+    public int shortestPathBinaryMatrix(int[][] grid) {
+        int n = grid.length;
+        if (grid[0][0] == 1 || grid[n - 1][n - 1] == 1) return -1;
+        int[][] DIRS = new int[][]{{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+        ArrayDeque<Integer> queue = new ArrayDeque<Integer>();
+        queue.add(0);
+        grid[0][0] = 1;
+        int step = 0;
+        while (!queue.isEmpty()) {
+            step++;
+            int x = queue.size();
+            for (int i = 0; i < x; i++) {
+                int cur = queue.poll();
+                if (cur == n * n - 1) return step;
+                int curX = cur / n, curY = cur % n;
+                for (int[] D : DIRS) {
+                    int nxtX = curX + D[0], nxtY = curY + D[1];
+                    if (nxtX < 0 || nxtY < 0 || nxtX >= n || nxtY >= n || grid[nxtX][nxtY] != 0) continue;
+                    grid[nxtX][nxtY] = 1;
+                    queue.add(nxtX * n + nxtY);
+                }
+            }
+        }
+        return -1;
+    }
+}
